@@ -1,0 +1,19 @@
+server:
+  port: 8084
+hm:
+  jwt:
+    location: classpath:hmall.jks
+    alias: hmall
+    password: hmall123
+    tokenTTL: 30m
+  auth:
+    excludePaths:
+      - /search/**
+      - /users/login
+      - /items/**
+      - /hi
+  swagger:
+    title: "黑马商城购物车服务接口文档"
+    package: com.hmall.user.controller
+  db:
+    database: hm-user
